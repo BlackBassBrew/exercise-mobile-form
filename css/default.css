@@ -1,0 +1,17 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --font-color-base: #666;
+  --font-color-dark: #212529;
+  --font-color-light: #b08ebe;
+  --header-info-color: #4B01D1;
+  --header-color-base: #6203EE;
+  --header-info-font-color: gray;
+  --header-font-color: var(--white);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--black);
+}
