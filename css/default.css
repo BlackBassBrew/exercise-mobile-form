@@ -4,14 +4,57 @@
   --font-color-base: #666;
   --font-color-dark: #212529;
   --font-color-light: #b08ebe;
-  --header-info-color: #4B01D1;
+  --header-info-dark: #4B01D1;
+  --header-info-icon: rgba(255, 255, 255, 0.6);
   --header-color-base: #6203EE;
-  --header-info-font-color: gray;
   --header-font-color: var(--white);
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: var(--black);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .menu-header {
+    background-color: var(--header-color-base);
+    color: var(--header-font-color);
+  }
+
+  .header-icon {
+    color: var(--header-info-icon);
+  }
+
+  .info-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--header-info-dark);
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .triangle {
+    margin-bottom: 4px;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .nav-header a:nth-child(3) {
+    margin-left: 12rem;
+  }
+
+  .nav-header h1 {
+    font-weight: 100;
+    font-size: 1.8rem;
+  }
+  .nav-header i, .nav-header a {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
 }
