@@ -4,22 +4,31 @@
   --font-color-base: #666;
   --font-color-dark: #212529;
   --font-color-light: #b08ebe;
-  --header-info-dark: #4B01D1;
+  --header-info-dark: #4b01d1;
   --header-info-icon: rgba(255, 255, 255, 0.6);
-  --header-color-base: #6203EE;
+  --header-color-base: #6203ee;
   --header-font-color: var(--white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 480px) {
   .menu-header {
     background-color: var(--header-color-base);
     color: var(--header-font-color);
+    width: 100%;
   }
 
   .header-icon {
@@ -31,18 +40,20 @@ body {
     justify-content: end;
     align-items: center;
     background-color: var(--header-info-dark);
-    gap: 5px;
-    padding: 5px;
+    gap: 10px;
+    padding: 0.3rem;
   }
 
   .triangle {
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
 
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
   }
 
   .nav-header a:nth-child(3) {
@@ -53,8 +64,83 @@ body {
     font-weight: 100;
     font-size: 1.8rem;
   }
-  .nav-header i, .nav-header a {
+  .nav-header i,
+  .nav-header a {
     font-size: 1.5rem;
     color: var(--white);
+  }
+
+  form {
+    text-align: center;
+    width: 100vw;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--font-color-dark);
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  ul li {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+    gap: 10px;
+  }
+
+  li input,
+  li select {
+    flex: 1 1 0;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  .gray {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #E8E8E8;
+  }
+
+  li i {
+    font-size: 25px;
+    width: 12%;
+  }
+
+  #city,
+  #state {
+    margin-left: 4.0rem;
+  }
+
+  #phone-number,
+  #zip-code {
+    width: 10%;
+  }
+
+  .form-input {
+    font-size: 1.1rem;
+    padding: 0.3rem 1rem;
+    height: 2.7rem;
+  }
+
+  #phone-type,
+  #state,
+  #birthday {
+    height: 3.15em;
   }
 }
