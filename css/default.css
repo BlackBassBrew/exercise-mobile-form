@@ -86,8 +86,7 @@ body {
     flex-direction: column;
     gap: 1rem;
     color: var(--font-color-dark);
-    padding-left: 0.5rem;
-    padding-right: 1.5rem;
+    padding-right: 2.0rem;
     box-sizing: border-box;
   }
 
